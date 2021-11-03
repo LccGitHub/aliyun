@@ -1,5 +1,6 @@
 ifeq (,$(findstring llvm,$(CC)))
-CFLAGS  := "$(sort $(CFLAGS) $(CONFIG_ENV_CFLAGS))"
+#CFLAGS  := "$(sort $(CFLAGS) $(CONFIG_ENV_CFLAGS))"
+CFLAGS  := "$(CFLAGS) $(CONFIG_ENV_CFLAGS)"
 else
 CFLAGS  := "$(CFLAGS) $(CONFIG_ENV_CFLAGS)"
 endif
